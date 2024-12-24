@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CLASSIFY - Página Inicial</title>
+    <link rel="stylesheet" href="../static/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <!-- Sidebar -->
+        <aside class="sidebar">
+            <h1 class="logo">CLASSIFY</h1>
+            <nav class="menu">
+                <ul>
+                    <li><a href="../usuario_list.html">Tabela de Usuários</a></li>
+                    <li>
+                        <a href="#" class="submenu-toggle">Cadastros</a>
+                        <ul class="submenu">
+                            <li><a href="{{ url_for('adm_cadastro_bp.mostrar_formulario') }}">Cadastro de Administradores</a></li>
+                            <li><a href="{{ url_for('aluno_cadastro_bp.mostrar_formulario') }}">Cadastro de Alunos</a></li>
+                            <li><a href="{{ url_for('professor_cadastro_bp.mostrar_formulario') }}">Cadastro de Professores</a></li>
+                            <li><a href="{{ url_for('turma_cadastro_bp.mostrar_formulario') }}">Cadastro de Turmas</a></li>
+                        </ul>
+                    </li>
+                    <li><a href="{{ url_for('turma_bp.selecionar_turma') }}">Turmas</a></li>
+                    <li><a href="#">Caixa de entrada</a></li>
+                    <li><a href="#">Configurações</a></li>
+                </ul>
+            </nav>
+        </aside>
+        
+        <!-- Main Content -->
+        <div class="main-content">
+            <header class="header">
+                <h2>Bem-vindo ao CLASSIFY</h2>
+            </header>
+            
+            <!-- Description Section -->
+            <section class="description-section">
+                <h3>Sobre o CLASSIFY</h3>
+                <p>O CLASSIFY é um sistema desenvolvido para facilitar o gerenciamento escolar. Com ele, você pode:</p>
+                <ul>
+                    <li>Gerenciar o cadastro de alunos, professores e administradores.</li>
+                    <li>Organizar turmas e informações acadêmicas.</li>
+                    <li>Registrar e consultar notas e avaliações.</li>
+                </ul>
+                <p>Use o menu na barra lateral para navegar pelas funcionalidades do sistema.</p>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
